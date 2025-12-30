@@ -91,9 +91,57 @@ function contarCaracter(a, b) {
 }
 c = "zkjkzjfjuztez";
 d = "z";
-console.log("Contar caracteres: ", contarCaracter(c,d));
+console.log("Contar caracteres: ", contarCaracter(c, d));
 
 //**********************************************************
+
+// 7 - Suma de un rango 
+
+function range(inicio, fin) {
+    let arr = [];
+    for (let i = inicio; i < fin + 1; i++) {
+        arr.push(i)
+    }
+    return arr;
+}
+console.log("range: ", range(2, 6));
+
+function sumaArr(arr) {
+    let suma = 0;
+    for (let i = 0; i < arr.length; i++) {
+        suma += arr[i];
+    }
+    return suma;
+}
+let neo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("suma arrays", sumaArr(neo));
+
+function range2(inicio, fin, paso) {
+    let arr = [];
+    if (paso === 0) {
+        return "Paso no puede ser igual a 0";
+    }
+    else if (paso > 0) {
+        for (let i = inicio; i < fin + 1; i += paso) {
+            arr.push(i);
+        }
+    }
+    else if (paso < 0) {
+        for (let i = inicio; i > fin-1; i += paso) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+console.log("range2: ", range2(1,10,2));
+console.log("range2: ", range2(5,2,-1));
+
+
+// *************************************************************
+
+// 8 - 
+
+
 
 
 
