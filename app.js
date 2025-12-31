@@ -127,19 +127,51 @@ function range2(inicio, fin, paso) {
         }
     }
     else if (paso < 0) {
-        for (let i = inicio; i > fin-1; i += paso) {
+        for (let i = inicio; i > fin - 1; i += paso) {
             arr.push(i);
         }
     }
     return arr;
 }
-console.log("range2: ", range2(1,10,2));
-console.log("range2: ", range2(5,2,-1));
+console.log("range2: ", range2(1, 10, 2));
+console.log("range2: ", range2(5, 2, -1));
 
 
 // *************************************************************
 
-// 8 - 
+// 8 - Reversion de un array
+
+function reverseArray(arr) {
+    let nuevoArr = [];
+    for (let i = arr.length-1; i >= 0; i--) {
+        nuevoArr.push(arr[i]);
+    }
+    return nuevoArr;
+}
+
+let array1 = [1,2,3,4,5,6,7,8,9,10];
+let array2 = [1,2,3,4,5]
+console.log("reverseArray: ", reverseArray(array2));
+
+function reverseArrayInPlace(arr) {
+    let temp;
+
+    for (let i = 0; i < (arr.length)/2; i++) {
+        temp = arr[i];
+        arr[i] = arr[(arr.length-1)-i];
+        arr[(arr.length-1)-i] = temp;
+    }
+    return arr;  
+}
+console.log("reverseArrayInPlace: ", reverseArrayInPlace(array1));
+
+// *************************************************************
+
+// 9 - Lista
+
+
+
+
 
 
 
